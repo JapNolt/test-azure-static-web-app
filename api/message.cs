@@ -29,7 +29,7 @@ namespace LT.Function
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello, {name}. This HTTP triggered function executed successfully.";
 
-            var resp = JsonConvert.SerializeObject(new { Text = responseMessage });
+            var resp = JsonConvert.SerializeObject(new { text = responseMessage });
 
             return new OkObjectResult(resp);
         }
